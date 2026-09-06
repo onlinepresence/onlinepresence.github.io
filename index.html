@@ -1,24 +1,28 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Seth Boye Afosah | Full-Stack Software Engineer</title>
+    <meta name="description" content="Portfolio of Seth Boye Afosah - Backend-focused Full-Stack Software Engineer specializing in Laravel, PHP, and scalable web applications.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
     <script src="https://unpkg.com/lucide@latest"></script>
 </head>
 <body>
-    <!-- Cursor follower -->
-    <div class="cursor-follower"></div>
+    <!-- Theme Toggle -->
+    <button class="theme-toggle" aria-label="Toggle theme" onclick="toggleTheme()">
+        <i data-lucide="sun" class="icon-sun"></i>
+        <i data-lucide="moon" class="icon-moon"></i>
+    </button>
 
     <!-- Navigation -->
     <nav class="navbar">
         <div class="nav-container">
             <a href="#home" class="logo">
-                <span class="logo-bracket">{</span>SBA<span class="logo-bracket">}</span>
+                SBA<span class="logo-dot">.</span>
             </a>
             <button class="nav-toggle" aria-label="Toggle navigation">
                 <i data-lucide="menu"></i>
@@ -35,118 +39,123 @@
 
     <!-- Hero Section -->
     <section id="home" class="hero">
-        <div class="hero-bg-grid"></div>
-        <div class="hero-content">
-            <div class="hero-badge">
-                <span class="badge-dot"></span>
-                Available for opportunities
+        <div class="hero-grid"></div>
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-badge">
+                    <span class="badge-pulse"></span>
+                    Available for opportunities
+                </div>
+                <h1 class="hero-title">
+                    Hi, I'm <span class="highlight">Seth Boye</span>
+                    <br>Afosah
+                </h1>
+                <p class="hero-subtitle">
+                    Backend-focused <strong>Full-Stack Software Engineer</strong> building scalable web applications with Laravel, PHP & modern JavaScript. Based in Ashaiman, Ghana.
+                </p>
+                <div class="hero-actions">
+                    <a href="#projects" class="btn btn-primary">
+                        View My Work
+                        <i data-lucide="arrow-right"></i>
+                    </a>
+                    <a href="#contact" class="btn btn-secondary">
+                        Get In Touch
+                    </a>
+                </div>
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <span class="stat-number">3+</span>
+                        <span class="stat-label">Years Exp</span>
+                    </div>
+                    <div class="stat-divider"></div>
+                    <div class="stat-item">
+                        <span class="stat-number">10+</span>
+                        <span class="stat-label">Projects</span>
+                    </div>
+                    <div class="stat-divider"></div>
+                    <div class="stat-item">
+                        <span class="stat-number">2</span>
+                        <span class="stat-label">Active Systems</span>
+                    </div>
+                </div>
             </div>
-            <h1 class="hero-title">
-                <span class="title-line">Hi, I'm</span>
-                <span class="title-main">Seth Boye</span>
-                <span class="title-accent">Afosah</span>
-            </h1>
-            <p class="hero-subtitle">
-                Backend-focused <span class="highlight">Full-Stack Software Engineer</span> crafting scalable web applications with Laravel, PHP & modern JavaScript.
-            </p>
-            <div class="hero-actions">
-                <a href="#projects" class="btn btn-primary">
-                    <span>View My Work</span>
-                    <i data-lucide="arrow-right"></i>
-                </a>
-                <a href="#contact" class="btn btn-secondary">
-                    <span>Get In Touch</span>
-                </a>
-            </div>
-            <div class="hero-stats">
-                <div class="stat">
-                    <span class="stat-number">3+</span>
-                    <span class="stat-label">Years Experience</span>
-                </div>
-                <div class="stat-divider"></div>
-                <div class="stat">
-                    <span class="stat-number">10+</span>
-                    <span class="stat-label">Projects Delivered</span>
-                </div>
-                <div class="stat-divider"></div>
-                <div class="stat">
-                    <span class="stat-number">2</span>
-                    <span class="stat-label">Active Systems</span>
-                </div>
-            </div>
-        </div>
-        <div class="hero-visual">
-            <div class="code-window">
-                <div class="window-header">
-                    <span class="dot red"></span>
-                    <span class="dot yellow"></span>
-                    <span class="dot green"></span>
-                    <span class="window-title">developer.php</span>
-                </div>
-                <div class="window-content">
-                    <code>
-                        <span class="code-keyword">$engineer</span> = <span class="code-keyword">new</span> <span class="code-class">FullStackDeveloper</span>();<br><br>
-                        $engineer<br>
-                        &nbsp;&nbsp;->setName(<span class="code-string">"Seth Boye Afosah"</span>)<br>
-                        &nbsp;&nbsp;->setLocation(<span class="code-string">"Ashaiman, Ghana"</span>)<br>
-                        &nbsp;&nbsp;->addSkill(<span class="code-string">"Laravel"</span>)<br>
-                        &nbsp;&nbsp;->addSkill(<span class="code-string">"PHP"</span>)<br>
-                        &nbsp;&nbsp;->addSkill(<span class="code-string">"MySQL"</span>)<br>
-                        &nbsp;&nbsp;->addSkill(<span class="code-string">"JavaScript"</span>)<br>
-                        &nbsp;&nbsp;->addSkill(<span class="code-string">"TypeScript"</span>)<br>
-                        &nbsp;&nbsp;->addSkill(<span class="code-string">"React"</span>)<br>
-                        &nbsp;&nbsp;->addSkill(<span class="code-string">"Node.js"</span>)<br>
-                        &nbsp;&nbsp;->build();<br><br>
-                        <span class="code-comment">// Ready to solve your challenges</span>
-                    </code>
+            <div class="hero-visual">
+                <div class="code-card">
+                    <div class="code-header">
+                        <span class="code-dots">
+                            <span></span><span></span><span></span>
+                        </span>
+                        <span class="code-filename">developer.php</span>
+                    </div>
+                    <pre class="code-content"><code><span class="code-keyword">$engineer</span> = <span class="code-keyword">new</span> <span class="code-class">SoftwareEngineer</span>();
+
+$engineer
+  ->setName(<span class="code-string">"Seth Boye Afosah"</span>)
+  ->setRole(<span class="code-string">"Full-Stack Engineer"</span>)
+  ->setLocation(<span class="code-string">"Ashaiman, GH"</span>)
+  ->addSkill(<span class="code-string">"Laravel"</span>)
+  ->addSkill(<span class="code-string">"PHP"</span>)
+  ->addSkill(<span class="code-string">"MySQL"</span>)
+  ->addSkill(<span class="code-string">"React"</span>)
+  ->addSkill(<span class="code-string">"TypeScript"</span>)
+  ->build();</code></pre>
                 </div>
             </div>
         </div>
-        <div class="scroll-indicator">
-            <span>Scroll to explore</span>
+        <a href="#about" class="scroll-indicator">
+            <span>Scroll</span>
             <i data-lucide="chevron-down"></i>
-        </div>
+        </a>
     </section>
 
     <!-- About Section -->
     <section id="about" class="about">
         <div class="container">
             <div class="section-header">
-                <span class="section-tag">01 // About Me</span>
+                <span class="section-tag">About</span>
                 <h2 class="section-title">Who I Am</h2>
             </div>
             <div class="about-grid">
-                <div class="about-content">
-                    <p class="about-text">
-                        I'm a <strong>Backend-focused Full-Stack Software Engineer</strong> based in Ashaiman, Greater Accra, Ghana. With a Bachelor's degree in Computer Science from Ho Technical University (completed September 2024), I specialize in building robust, scalable web applications.
+                <div class="about-text">
+                    <p class="lead">
+                        I'm a <strong>Backend-focused Full-Stack Software Engineer</strong> with a Bachelor's degree in Computer Science from Ho Technical University. I specialize in building robust, scalable web applications using the LAMP stack.
                     </p>
-                    <p class="about-text">
-                        My expertise lies in <strong>Laravel, PHP, and MySQL</strong>, with hands-on experience in RESTful API development, database optimization, secure authentication systems, and multi-tenant architectures. I'm passionate about writing clean code, solving complex problems, and delivering production-ready solutions.
+                    <p>
+                        My expertise centers on <strong>Laravel, PHP, and MySQL</strong>, with hands-on experience in RESTful API development, database optimization, secure authentication systems, and multi-tenant architectures. I'm passionate about clean code, solving complex problems, and delivering production-ready solutions.
                     </p>
-                    <p class="about-text">
-                        Currently serving as a <strong>Technical Lead</strong> at HealthBuk, where I design backend features for health-related systems and lead feature implementation efforts. I also contribute to various projects at S&S Innovative Hub, where I've been developing Laravel applications since 2020.
+                    <p>
+                        Currently serving as <strong>Technical Lead</strong> at HealthBuk, where I design backend features for health-related systems. I also contribute to projects at S&S Innovative Hub, developing Laravel applications since 2020.
                     </p>
-                    <div class="about-highlights">
-                        <div class="highlight-item">
-                            <i data-lucide="map-pin"></i>
-                            <span>Ashaiman, Ghana</span>
-                        </div>
-                        <div class="highlight-item">
-                            <i data-lucide="mail"></i>
-                            <span>safosah00@gmail.com</span>
-                        </div>
-                        <div class="highlight-item">
-                            <i data-lucide="phone"></i>
-                            <span>+233 279 284 896</span>
-                        </div>
-                    </div>
                 </div>
-                <div class="about-image">
-                    <div class="image-frame">
-                        <div class="frame-border"></div>
-                        <div class="profile-placeholder">
-                            <i data-lucide="user"></i>
-                            <span>Seth B. Afosah</span>
+                <div class="about-info">
+                    <div class="info-cards">
+                        <div class="info-card">
+                            <i data-lucide="map-pin"></i>
+                            <div>
+                                <span class="info-label">Location</span>
+                                <span class="info-value">Ashaiman, Ghana</span>
+                            </div>
+                        </div>
+                        <div class="info-card">
+                            <i data-lucide="mail"></i>
+                            <div>
+                                <span class="info-label">Email</span>
+                                <span class="info-value">safosah00@gmail.com</span>
+                            </div>
+                        </div>
+                        <div class="info-card">
+                            <i data-lucide="phone"></i>
+                            <div>
+                                <span class="info-label">Phone</span>
+                                <span class="info-value">+233 279 284 896</span>
+                            </div>
+                        </div>
+                        <div class="info-card">
+                            <i data-lucide="github"></i>
+                            <div>
+                                <span class="info-label">GitHub</span>
+                                <span class="info-value">onlinepresence</span>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -158,76 +167,72 @@
     <section id="skills" class="skills">
         <div class="container">
             <div class="section-header">
-                <span class="section-tag">02 // Skills</span>
+                <span class="section-tag">Skills</span>
                 <h2 class="section-title">Technical Arsenal</h2>
             </div>
-            <div class="skills-categories">
-                <div class="skill-category">
-                    <h3 class="category-title">Languages</h3>
-                    <div class="skill-tags">
-                        <span class="tag tag-active">PHP</span>
-                        <span class="tag tag-active">TypeScript</span>
-                        <span class="tag">JavaScript</span>
-                        <span class="tag">HTML5</span>
-                        <span class="tag">CSS3</span>
-                        <span class="tag">SQL</span>
-                        <span class="tag">C++</span>
+            <div class="skills-grid">
+                <div class="skill-group">
+                    <h3 class="group-title">Languages</h3>
+                    <div class="skill-list">
+                        <span class="skill-pill primary">PHP</span>
+                        <span class="skill-pill primary">TypeScript</span>
+                        <span class="skill-pill">JavaScript</span>
+                        <span class="skill-pill">HTML5</span>
+                        <span class="skill-pill">CSS3</span>
+                        <span class="skill-pill">SQL</span>
+                        <span class="skill-pill">C++</span>
                     </div>
                 </div>
-                <div class="skill-category">
-                    <h3 class="category-title">Frameworks & Libraries</h3>
-                    <div class="skill-tags">
-                        <span class="tag tag-framework">Laravel</span>
-                        <span class="tag tag-framework">Livewire</span>
-                        <span class="tag">Alpine.js</span>
-                        <span class="tag">React</span>
-                        <span class="tag">Nuxt.js</span>
-                        <span class="tag">jQuery</span>
-                        <span class="tag">Angular</span>
+                <div class="skill-group">
+                    <h3 class="group-title">Frameworks</h3>
+                    <div class="skill-list">
+                        <span class="skill-pill primary">Laravel</span>
+                        <span class="skill-pill secondary">Livewire</span>
+                        <span class="skill-pill">Alpine.js</span>
+                        <span class="skill-pill">React</span>
+                        <span class="skill-pill">Nuxt.js</span>
+                        <span class="skill-pill">jQuery</span>
+                        <span class="skill-pill">Angular</span>
                     </div>
                 </div>
-                <div class="skill-category">
-                    <h3 class="category-title">Databases</h3>
-                    <div class="skill-tags">
-                        <span class="tag tag-active">MySQL</span>
-                        <span class="tag">SQLite</span>
-                        <span class="tag">MongoDB</span>
+                <div class="skill-group">
+                    <h3 class="group-title">Databases</h3>
+                    <div class="skill-list">
+                        <span class="skill-pill primary">MySQL</span>
+                        <span class="skill-pill">SQLite</span>
+                        <span class="skill-pill">MongoDB</span>
                     </div>
                 </div>
-                <div class="skill-category">
-                    <h3 class="category-title">Cloud & DevOps</h3>
-                    <div class="skill-tags">
-                        <span class="tag tag-cloud">AWS EC2</span>
-                        <span class="tag">Linux</span>
-                        <span class="tag tag-cloud">GitHub Actions</span>
-                        <span class="tag">CI/CD</span>
-                        <span class="tag">Composer</span>
-                        <span class="tag">Supervisor</span>
-                        <span class="tag">cPanel</span>
+                <div class="skill-group">
+                    <h3 class="group-title">Cloud & DevOps</h3>
+                    <div class="skill-list">
+                        <span class="skill-pill secondary">AWS EC2</span>
+                        <span class="skill-pill">Linux</span>
+                        <span class="skill-pill secondary">GitHub Actions</span>
+                        <span class="skill-pill">CI/CD</span>
+                        <span class="skill-pill">Composer</span>
+                        <span class="skill-pill">cPanel</span>
                     </div>
                 </div>
-                <div class="skill-category">
-                    <h3 class="category-title">Tools & Platforms</h3>
-                    <div class="skill-tags">
-                        <span class="tag">VS Code</span>
-                        <span class="tag">Laragon</span>
-                        <span class="tag">XAMPP</span>
-                        <span class="tag">Cursor</span>
-                        <span class="tag">Figma</span>
-                        <span class="tag">Canva</span>
-                        <span class="tag">Git</span>
+                <div class="skill-group">
+                    <h3 class="group-title">Tools</h3>
+                    <div class="skill-list">
+                        <span class="skill-pill">VS Code</span>
+                        <span class="skill-pill">Laragon</span>
+                        <span class="skill-pill">Figma</span>
+                        <span class="skill-pill">Git</span>
+                        <span class="skill-pill">Cursor</span>
                     </div>
                 </div>
-                <div class="skill-category">
-                    <h3 class="category-title">Core Competencies</h3>
-                    <div class="skill-tags">
-                        <span class="tag tag-active">RESTful APIs</span>
-                        <span class="tag">Database Optimization</span>
-                        <span class="tag">Multi-Tenant Architecture</span>
-                        <span class="tag">Authentication Systems</span>
-                        <span class="tag">Payment Integration</span>
-                        <span class="tag">SMS API</span>
-                        <span class="tag">SEO</span>
+                <div class="skill-group">
+                    <h3 class="group-title">Core Skills</h3>
+                    <div class="skill-list">
+                        <span class="skill-pill primary">RESTful APIs</span>
+                        <span class="skill-pill">Database Optimization</span>
+                        <span class="skill-pill">Multi-Tenant Systems</span>
+                        <span class="skill-pill">Authentication</span>
+                        <span class="skill-pill">Payment Integration</span>
+                        <span class="skill-pill">SMS APIs</span>
                     </div>
                 </div>
             </div>
@@ -238,70 +243,76 @@
     <section id="experience" class="experience">
         <div class="container">
             <div class="section-header">
-                <span class="section-tag">03 // Experience</span>
+                <span class="section-tag">Experience</span>
                 <h2 class="section-title">Professional Journey</h2>
             </div>
             <div class="timeline">
                 <div class="timeline-item">
-                    <div class="timeline-marker"></div>
+                    <div class="timeline-dot"></div>
                     <div class="timeline-content">
                         <div class="timeline-header">
-                            <h3 class="job-title">PHP Developer & Technical Lead</h3>
-                            <span class="company">HealthBuk</span>
+                            <div>
+                                <h3 class="job-title">PHP Developer & Technical Lead</h3>
+                                <p class="company">HealthBuk</p>
+                            </div>
                             <span class="period">2023 - Present</span>
                         </div>
-                        <ul class="timeline-duties">
-                            <li>Design, develop, and maintain backend features using PHP and Laravel for production health-related systems</li>
-                            <li>Optimize application performance through query optimization and code refactoring, improving system reliability</li>
-                            <li>Generate technical reports and support data-driven decision-making</li>
-                            <li>Serve as technical lead, coordinating feature implementation and reviewing code contributions</li>
-                            <li>Utilized GitHub Actions and deployment scripts to support automated deployment and release processes</li>
+                        <ul class="duties">
+                            <li>Design and develop backend features using PHP and Laravel for production health systems</li>
+                            <li>Optimize application performance through query optimization and code refactoring</li>
+                            <li>Generate technical reports and support data-driven decision making</li>
+                            <li>Serve as technical lead, coordinating feature implementation and code reviews</li>
+                            <li>Utilized GitHub Actions and deployment scripts for automated releases</li>
                         </ul>
                     </div>
                 </div>
                 <div class="timeline-item">
-                    <div class="timeline-marker"></div>
+                    <div class="timeline-dot"></div>
                     <div class="timeline-content">
                         <div class="timeline-header">
-                            <h3 class="job-title">Web Developer & Programmer</h3>
-                            <span class="company">S&S Innovative Hub</span>
+                            <div>
+                                <h3 class="job-title">Web Developer & Programmer</h3>
+                                <p class="company">S&S Innovative Hub</p>
+                            </div>
                             <span class="period">2020 - Present</span>
                         </div>
-                        <ul class="timeline-duties">
-                            <li>Developed and maintained Laravel applications following best programming and SEO practices</li>
+                        <ul class="duties">
+                            <li>Developed and maintained Laravel applications following best practices</li>
                             <li>Implemented security best practices to improve data protection</li>
-                            <li>Provided periodic reports on software updates and system performance</li>
-                            <li>Built multiple client-facing platforms including SHSDesk and FlowEdu</li>
+                            <li>Built client-facing platforms including SHSDesk and FlowEdu</li>
                         </ul>
                     </div>
                 </div>
                 <div class="timeline-item">
-                    <div class="timeline-marker"></div>
+                    <div class="timeline-dot"></div>
                     <div class="timeline-content">
                         <div class="timeline-header">
-                            <h3 class="job-title">Web Developer (Intern)</h3>
-                            <span class="company">Millenium Hub</span>
+                            <div>
+                                <h3 class="job-title">Web Developer (Intern)</h3>
+                                <p class="company">Millenium Hub</p>
+                            </div>
                             <span class="period">2022</span>
                         </div>
-                        <ul class="timeline-duties">
-                            <li>Debugged and resolved frontend and backend issues to improve application stability</li>
-                            <li>Developed responsive user interfaces using HTML5, CSS3, and JavaScript</li>
-                            <li>Built backend services with PHP and Laravel, using Git for version control</li>
+                        <ul class="duties">
+                            <li>Debugged frontend and backend issues to improve application stability</li>
+                            <li>Developed responsive UIs using HTML5, CSS3, and JavaScript</li>
+                            <li>Built backend services with PHP and Laravel</li>
                         </ul>
                     </div>
                 </div>
                 <div class="timeline-item">
-                    <div class="timeline-marker"></div>
+                    <div class="timeline-dot"></div>
                     <div class="timeline-content">
                         <div class="timeline-header">
-                            <h3 class="job-title">Teacher Assistant</h3>
-                            <span class="company">Ho Technical University</span>
+                            <div>
+                                <h3 class="job-title">Teacher Assistant</h3>
+                                <p class="company">Ho Technical University</p>
+                            </div>
                             <span class="period">2021 - 2022</span>
                         </div>
-                        <ul class="timeline-duties">
+                        <ul class="duties">
                             <li>Assisted in teaching C++ and SQL (Oracle) to undergraduate students</li>
-                            <li>Provided one-on-one coding support, debugging assistance, and practical exercises</li>
-                            <li>Collaborated with lecturers to create a hands-on learning experience</li>
+                            <li>Provided one-on-one coding support and debugging assistance</li>
                         </ul>
                     </div>
                 </div>
@@ -318,7 +329,7 @@
                         <h4>Bachelor of Technology in Computer Science</h4>
                         <p class="edu-school">Ho Technical University (HTU)</p>
                         <p class="edu-location">Ho, Volta Region, Ghana</p>
-                        <p class="edu-date">Graduated: September 2024</p>
+                        <p class="edu-date">Graduated September 2024</p>
                     </div>
                 </div>
             </div>
@@ -329,151 +340,125 @@
     <section id="projects" class="projects">
         <div class="container">
             <div class="section-header">
-                <span class="section-tag">04 // Projects</span>
+                <span class="section-tag">Projects</span>
                 <h2 class="section-title">Featured Work</h2>
             </div>
             <div class="projects-grid">
-                <a href="https://www.new-college.shsdesk.com" target="_blank" class="project-card project-featured">
+                <a href="https://www.new-college.shsdesk.com" target="_blank" class="project-card featured">
                     <div class="project-badge">Featured</div>
-                    <div class="project-icon">
-                        <i data-lucide="school"></i>
+                    <div class="project-header">
+                        <i data-lucide="school" class="project-icon"></i>
+                        <span class="project-link-icon"><i data-lucide="external-link"></i></span>
                     </div>
                     <h3 class="project-name">FlowEdu</h3>
-                    <p class="project-desc">Multi-tenant school management system for Colleges of Education built with Laravel, Blade, Livewire, and Alpine.js. Features database indexing for large datasets.</p>
+                    <p class="project-desc">Multi-tenant school management system for Colleges of Education built with Laravel, Blade, Livewire, and Alpine.js.</p>
                     <div class="project-tags">
-                        <span class="tag">Laravel</span>
-                        <span class="tag">Livewire</span>
-                        <span class="tag">MySQL</span>
-                    </div>
-                    <div class="project-link">
-                        <span>Visit Project</span>
-                        <i data-lucide="external-link"></i>
+                        <span>Laravel</span>
+                        <span>Livewire</span>
+                        <span>MySQL</span>
                     </div>
                 </a>
 
                 <a href="https://www.newapp.edurecordsgh.com" target="_blank" class="project-card">
-                    <div class="project-icon">
-                        <i data-lucide="file-text"></i>
+                    <div class="project-header">
+                        <i data-lucide="file-text" class="project-icon"></i>
+                        <span class="project-link-icon"><i data-lucide="external-link"></i></span>
                     </div>
                     <h3 class="project-name">EduRecordsGH</h3>
-                    <p class="project-desc">School management system for basic schools using the LAMP stack with optimized database performance and scalable backend modules.</p>
+                    <p class="project-desc">School management system for basic schools with optimized database performance and scalable backend modules.</p>
                     <div class="project-tags">
-                        <span class="tag">Laravel</span>
-                        <span class="tag">PHP</span>
-                        <span class="tag">MySQL</span>
-                    </div>
-                    <div class="project-link">
-                        <span>Visit Project</span>
-                        <i data-lucide="external-link"></i>
+                        <span>Laravel</span>
+                        <span>PHP</span>
+                        <span>MySQL</span>
                     </div>
                 </a>
 
                 <a href="https://www.purity-conf.netlify.com" target="_blank" class="project-card">
-                    <div class="project-icon">
-                        <i data-lucide="users"></i>
+                    <div class="project-header">
+                        <i data-lucide="users" class="project-icon"></i>
+                        <span class="project-link-icon"><i data-lucide="external-link"></i></span>
                     </div>
                     <h3 class="project-name">Purity Conference</h3>
-                    <p class="project-desc">Event website for ticket sales and sponsorships using Nuxt 3, Vue 3, TypeScript, and custom PHP backend.</p>
+                    <p class="project-desc">Event website for ticket sales and sponsorships using Nuxt 3, Vue 3, TypeScript.</p>
                     <div class="project-tags">
-                        <span class="tag">Vue 3</span>
-                        <span class="tag">Nuxt 3</span>
-                        <span class="tag">TypeScript</span>
-                    </div>
-                    <div class="project-link">
-                        <span>Visit Project</span>
-                        <i data-lucide="external-link"></i>
+                        <span>Vue 3</span>
+                        <span>Nuxt 3</span>
+                        <span>TypeScript</span>
                     </div>
                 </a>
 
                 <a href="https://www.shsdesk.com" target="_blank" class="project-card">
-                    <div class="project-icon">
-                        <i data-lucide="book-open"></i>
+                    <div class="project-header">
+                        <i data-lucide="book-open" class="project-icon"></i>
+                        <span class="project-link-icon"><i data-lucide="external-link"></i></span>
                     </div>
                     <h3 class="project-name">SHSDesk</h3>
                     <p class="project-desc">Online admission platform for secondary schools with integrated SMS and payment gateway APIs.</p>
                     <div class="project-tags">
-                        <span class="tag">PHP</span>
-                        <span class="tag">Angular</span>
-                        <span class="tag">jQuery</span>
-                    </div>
-                    <div class="project-link">
-                        <span>Visit Project</span>
-                        <i data-lucide="external-link"></i>
+                        <span>PHP</span>
+                        <span>Angular</span>
+                        <span>jQuery</span>
                     </div>
                 </a>
 
                 <div class="project-card">
-                    <div class="project-icon">
-                        <i data-lucide="briefcase"></i>
+                    <div class="project-header">
+                        <i data-lucide="briefcase" class="project-icon"></i>
+                        <span class="project-link-icon"><i data-lucide="arrow-up-right"></i></span>
                     </div>
                     <h3 class="project-name">LaborBay</h3>
-                    <p class="project-desc">Recruitment platform connecting businesses with skilled talents, built with Laravel and optimized database strategies.</p>
+                    <p class="project-desc">Recruitment platform connecting businesses with skilled talents, built with Laravel.</p>
                     <div class="project-tags">
-                        <span class="tag">Laravel</span>
-                        <span class="tag">Blade</span>
-                        <span class="tag">MySQL</span>
-                    </div>
-                    <div class="project-link">
-                        <span>Case Study</span>
-                        <i data-lucide="arrow-right"></i>
+                        <span>Laravel</span>
+                        <span>Blade</span>
+                        <span>MySQL</span>
                     </div>
                 </div>
 
                 <div class="project-card">
-                    <div class="project-icon">
-                        <i data-lucide="building-2"></i>
+                    <div class="project-header">
+                        <i data-lucide="building-2" class="project-icon"></i>
+                        <span class="project-link-icon"><i data-lucide="arrow-up-right"></i></span>
                     </div>
                     <h3 class="project-name">Estate Management</h3>
-                    <p class="project-desc">Real estate management system with map integration for property listings and management.</p>
+                    <p class="project-desc">Real estate management system with map integration for property listings.</p>
                     <div class="project-tags">
-                        <span class="tag">PHP</span>
-                        <span class="tag">jQuery</span>
-                        <span class="tag">Map APIs</span>
-                    </div>
-                    <div class="project-link">
-                        <span>View Details</span>
-                        <i data-lucide="arrow-right"></i>
+                        <span>PHP</span>
+                        <span>jQuery</span>
+                        <span>Map APIs</span>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Leadership Section -->
-    <section class="leadership">
+    <!-- Activities Section -->
+    <section class="activities">
         <div class="container">
             <div class="section-header">
-                <span class="section-tag">05 // Activities</span>
+                <span class="section-tag">Activities</span>
                 <h2 class="section-title">Leadership & Involvement</h2>
             </div>
             <div class="activities-grid">
                 <div class="activity-card">
-                    <div class="activity-icon">
-                        <i data-lucide="trophy"></i>
-                    </div>
+                    <div class="activity-icon"><i data-lucide="trophy"></i></div>
                     <h4>Exhibitor</h4>
                     <p>ATUAS 2023</p>
                 </div>
                 <div class="activity-card">
-                    <div class="activity-icon">
-                        <i data-lucide="code-2"></i>
-                    </div>
+                    <div class="activity-icon"><i data-lucide="code-2"></i></div>
                     <h4>Participant</h4>
                     <p>HackLab 2021</p>
                 </div>
                 <div class="activity-card">
-                    <div class="activity-icon">
-                        <i data-lucide="users"></i>
-                    </div>
+                    <div class="activity-icon"><i data-lucide="users"></i></div>
                     <h4>Member</h4>
                     <p>COMPSA HTU</p>
                 </div>
                 <div class="activity-card">
-                    <div class="activity-icon">
-                        <i data-lucide="zap"></i>
-                    </div>
+                    <div class="activity-icon"><i data-lucide="zap"></i></div>
                     <h4>Member</h4>
-                    <p>AXLR8 [Accelerate] HTU</p>
+                    <p>AXLR8 HTU</p>
                 </div>
             </div>
         </div>
@@ -483,66 +468,50 @@
     <section id="contact" class="contact">
         <div class="container">
             <div class="section-header">
-                <span class="section-tag">06 // Contact</span>
+                <span class="section-tag">Contact</span>
                 <h2 class="section-title">Let's Work Together</h2>
             </div>
             <div class="contact-grid">
                 <div class="contact-info">
                     <h3>Get in Touch</h3>
-                    <p>I'm always open to discussing new projects, creative ideas, or opportunities to be part of your vision.</p>
+                    <p>I'm always open to discussing new projects, creative ideas, or opportunities.</p>
                     <div class="contact-methods">
-                        <a href="mailto:safosah00@gmail.com" class="contact-method">
-                            <div class="method-icon">
-                                <i data-lucide="mail"></i>
-                            </div>
-                            <div class="method-details">
-                                <span class="method-label">Email</span>
-                                <span class="method-value">safosah00@gmail.com</span>
-                            </div>
+                        <a href="mailto:safosah00@gmail.com" class="contact-item">
+                            <div class="contact-icon"><i data-lucide="mail"></i></div>
+                            <span>safosah00@gmail.com</span>
                         </a>
-                        <a href="tel:+233279284896" class="contact-method">
-                            <div class="method-icon">
-                                <i data-lucide="phone"></i>
-                            </div>
-                            <div class="method-details">
-                                <span class="method-label">Phone</span>
-                                <span class="method-value">+233 279 284 896</span>
-                            </div>
+                        <a href="tel:+233279284896" class="contact-item">
+                            <div class="contact-icon"><i data-lucide="phone"></i></div>
+                            <span>+233 279 284 896</span>
                         </a>
-                        <a href="https://github.com/onlinepresence" target="_blank" class="contact-method">
-                            <div class="method-icon">
-                                <i data-lucide="github"></i>
-                            </div>
-                            <div class="method-details">
-                                <span class="method-label">GitHub</span>
-                                <span class="method-value">github.com/onlinepresence</span>
-                            </div>
+                        <a href="https://github.com/onlinepresence" target="_blank" class="contact-item">
+                            <div class="contact-icon"><i data-lucide="github"></i></div>
+                            <span>github.com/onlinepresence</span>
                         </a>
                     </div>
-                    <div class="contact-location">
-                        <i data-lucide="map-pin"></i>
-                        <span>Ashaiman, Greater Accra, Ghana</span>
-                    </div>
+                    <p class="location"><i data-lucide="map-pin"></i> Ashaiman, Greater Accra, Ghana</p>
                 </div>
                 <form class="contact-form" action="https://formspree.io/f/safosah00@gmail.com" method="POST">
-                    <div class="form-group">
-                        <label for="name">Your Name</label>
-                        <input type="text" id="name" name="name" required placeholder="John Doe">
-                    </div>
-                    <div class="form-group">
-                        <label for="email">Your Email</label>
-                        <input type="email" id="email" name="email" required placeholder="john@example.com">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" id="name" name="name" required placeholder="Your name">
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" required placeholder="your@email.com">
+                        </div>
                     </div>
                     <div class="form-group">
                         <label for="subject">Subject</label>
-                        <input type="text" id="subject" name="subject" placeholder="Project Inquiry">
+                        <input type="text" id="subject" name="subject" placeholder="Project inquiry">
                     </div>
                     <div class="form-group">
                         <label for="message">Message</label>
                         <textarea id="message" name="message" rows="5" required placeholder="Tell me about your project..."></textarea>
                     </div>
                     <button type="submit" class="btn btn-primary btn-full">
-                        <span>Send Message</span>
+                        Send Message
                         <i data-lucide="send"></i>
                     </button>
                 </form>
@@ -555,12 +524,10 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-brand">
-                    <a href="#home" class="logo">
-                        <span class="logo-bracket">{</span>SBA<span class="logo-bracket">}</span>
-                    </a>
+                    <a href="#home" class="logo">SBA<span class="logo-dot">.</span></a>
                     <p>Building scalable solutions with clean code and modern technologies.</p>
                 </div>
-                <div class="footer-links">
+                <div class="footer-nav">
                     <a href="#about">About</a>
                     <a href="#skills">Skills</a>
                     <a href="#experience">Experience</a>
@@ -568,20 +535,13 @@
                     <a href="#contact">Contact</a>
                 </div>
                 <div class="footer-social">
-                    <a href="https://github.com/onlinepresence" target="_blank" aria-label="GitHub">
-                        <i data-lucide="github"></i>
-                    </a>
-                    <a href="mailto:safosah00@gmail.com" aria-label="Email">
-                        <i data-lucide="mail"></i>
-                    </a>
-                    <a href="tel:+233279284896" aria-label="Phone">
-                        <i data-lucide="phone"></i>
-                    </a>
+                    <a href="https://github.com/onlinepresence" target="_blank" aria-label="GitHub"><i data-lucide="github"></i></a>
+                    <a href="mailto:safosah00@gmail.com" aria-label="Email"><i data-lucide="mail"></i></a>
                 </div>
             </div>
             <div class="footer-bottom">
                 <p>&copy; 2024 Seth Boye Afosah. All rights reserved.</p>
-                <p>Built with <i data-lucide="heart" class="heart-icon"></i> and lots of coffee</p>
+                <p>Built with passion and lots of coffee</p>
             </div>
         </div>
     </footer>

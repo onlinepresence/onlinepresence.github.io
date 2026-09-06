@@ -1,115 +1,71 @@
-# 🚀 GitHub Pages Deployment Guide for Seth's Portfolio
+# 🚀 Seth's Portfolio — Deployment Guide
 
-## Step 1: Create Your GitHub Repository
+## Quick Start
 
-1. Go to [github.com](https://github.com) and sign in
-2. Click the **+** icon (top right) → **New repository**
-3. Fill in the details:
-   - **Repository name**: `username.github.io` (replace with YOUR GitHub username)
-     - Example: If your username is `sethboye`, the repo name should be `sethboye.github.io`
-   - **Description**: `Personal Portfolio Website`
-   - **Public** ✓ (must be public for GitHub Pages)
-   - **Initialize with**: Leave empty (we'll push our files)
-4. Click **Create repository**
-
-## Step 2: Clone the Repository
-
-Open Terminal (Mac/Linux) or Command Prompt/PowerShell (Windows):
-
-```bash
-# Navigate to where you want to store the project
-cd ~/Documents  # or any folder you prefer
-
-# Clone your repository
-git clone https://github.com/YOUR_USERNAME/YOUR_USERNAME.github.io.git
-
-# Enter the directory
-cd YOUR_USERNAME.github.io
-```
-
-Replace `YOUR_USERNAME` with your actual GitHub username.
-
-## Step 3: Copy Portfolio Files
-
-Copy these files into the cloned repository folder:
-- `index.html`
-- `styles.css`
-- `script.js`
-- `README.md`
-
-**Using Command Line:**
-```bash
-# From the folder containing the portfolio files
-cp index.html styles.css script.js README.md ~/Documents/YOUR_USERNAME.github.io/
-```
-
-Or simply drag and drop the files into the folder in File Explorer.
-
-## Step 4: Commit and Push
-
-```bash
-# Check status
-git status
-
-# Add all files
-git add .
-
-# Commit with a message
-git commit -m "Initial portfolio deployment"
-
-# Push to GitHub
-git push origin main
-```
-
-If you get an error about branch names, use `master` instead of `main`:
-```bash
-git push origin master
-```
-
-## Step 5: Enable GitHub Pages
-
-1. Go to your repository on GitHub
-2. Click **Settings** tab
-3. Scroll down to **Pages** section
-4. Under **Source**, select **Deploy from a branch**
-5. Select branch: **main** (or **master**) and folder: **/(root)**
-6. Click **Save**
-
-Wait 1-2 minutes, then visit:
-```
-https://YOUR_USERNAME.github.io
-```
-
-## Optional: Use a Custom Domain
-
-If you have a custom domain (e.g., `www.sethboye.dev`):
-
-1. Add a **CNAME** file in your repository with your domain name
-2. Configure DNS settings with your domain provider
-3. GitHub Pages will automatically detect it
-
----
-
-## Portfolio Features
-
-✅ Bold & distinctive dark theme  
-✅ Responsive design (mobile-friendly)  
-✅ Smooth animations & interactions  
-✅ Contact form with Formspree integration  
-✅ Sections: About, Skills, Experience, Projects, Contact  
-✅ GitHub integration  
-
----
+This is a **Light & Clean** portfolio website with dark/light theme toggle.
 
 ## Files Included
 
-| File | Description |
-|------|-------------|
+| File | Purpose |
+|------|---------|
 | `index.html` | Main portfolio page |
-| `styles.css` | Bold dark theme styling |
-| `script.js` | Interactions & animations |
+| `styles.css` | Complete styling with theme variables |
+| `script.js` | Theme toggle, animations, interactions |
 | `README.md` | This file |
 
----
+## Theme Toggle Feature
 
-Need help? Open an issue on GitHub or contact me directly!
+- **Default:** Dark mode
+- **Toggle button:** Fixed in top-right corner (sun/moon icon)
+- **Memory:** Saves preference to localStorage
+- **Smooth transition:** All colors animate between themes
+
+## GitHub Pages Deployment
+
+### Step 1: Create Repository
+1. Go to github.com → New repository
+2. Name: `yourusername.github.io`
+3. Set to **Public**
+4. Click **Create repository**
+
+### Step 2: Clone & Deploy
+```bash
+git clone https://github.com/YOUR_USERNAME/YOUR_USERNAME.github.io.git
+cd YOUR_USERNAME.github.io
+
+# Copy all files from this folder
+git add .
+git commit -m "Initial portfolio"
+git push origin main
+```
+
+### Step 3: Enable GitHub Pages
+1. Settings → Pages
+2. Source: **Deploy from a branch**
+3. Branch: **main** → Folder: **/(root)**
+4. Save
+
+Visit: `https://yourusername.github.io`
+
+## Customization
+
+### Colors
+Edit CSS variables in `styles.css`:
+```css
+:root {
+    --accent-primary: #ff6b35;  /* Orange */
+    --accent-secondary: #00d4aa; /* Teal */
+    --accent-tertiary: #7c3aed;  /* Purple */
+}
+```
+
+### Content
+All content is in `index.html`. Look for:
+- About section text
+- Experience timeline items
+- Project cards
+- Contact information
+
+## Browser Support
+- Chrome, Firefox, Safari, Edge (latest 2 versions)
+- Mobile: iOS Safari, Chrome Android

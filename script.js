@@ -1,25 +1,23 @@
 // Initialize Lucide icons
 lucide.createIcons();
 
-// Cursor follower
-const cursor = document.querySelector('.cursor-follower');
-const isTouchDevice = window.matchMedia('(pointer: coarse)').matches;
+// ===== THEME TOGGLE =====
+function toggleTheme() {
+    const html = document.documentElement;
+    const currentTheme = html.getAttribute('data-theme');
+    const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
 
-if (!isTouchDevice && cursor) {
-    document.addEventListener('mousemove', (e) => {
-        cursor.style.left = e.clientX - 10 + 'px';
-        cursor.style.top = e.clientY - 10 + 'px';
-    });
-
-    // Add hover effect to interactive elements
-    const hoverElements = document.querySelectorAll('a, button, .project-card, .skill-category, .contact-method');
-    hoverElements.forEach(el => {
-        el.addEventListener('mouseenter', () => cursor.classList.add('hover'));
-        el.addEventListener('mouseleave', () => cursor.classList.remove('hover'));
-    });
+    html.setAttribute('data-theme', newTheme);
+    localStorage.setItem('theme', newTheme);
 }
 
-// Navbar scroll effect
+// Load saved theme on page load
+(function() {
+    const savedTheme = localStorage.getItem('theme') || 'dark';
+    document.documentElement.setAttribute('data-theme', savedTheme);
+})();
+
+// ===== NAVBAR SCROLL EFFECT =====
 const navbar = document.querySelector('.navbar');
 window.addEventListener('scroll', () => {
     if (window.scrollY > 50) {
@@ -29,18 +27,15 @@ window.addEventListener('scroll', () => {
     }
 });
 
-// Mobile navigation toggle
+// ===== MOBILE NAVIGATION =====
 const navToggle = document.querySelector('.nav-toggle');
 const navLinks = document.querySelector('.nav-links');
 
 navToggle.addEventListener('click', () => {
     navLinks.classList.toggle('active');
     const icon = navToggle.querySelector('i');
-    if (navLinks.classList.contains('active')) {
-        icon.setAttribute('data-lucide', 'x');
-    } else {
-        icon.setAttribute('data-lucide', 'menu');
-    }
+    const isOpen = navLinks.classList.contains('active');
+    icon.setAttribute('data-lucide', isOpen ? 'x' : 'menu');
     lucide.createIcons();
 });
 
@@ -54,7 +49,7 @@ document.querySelectorAll('.nav-links a').forEach(link => {
     });
 });
 
-// Smooth scrolling for anchor links
+// ===== SMOOTH SCROLLING =====
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function(e) {
         e.preventDefault();
@@ -70,7 +65,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-// Intersection Observer for animations
+// ===== INTERSECTION OBSERVER FOR ANIMATIONS =====
 const observerOptions = {
     threshold: 0.1,
     rootMargin: '0px 0px -50px 0px'
@@ -85,15 +80,15 @@ const observer = new IntersectionObserver((entries) => {
     });
 }, observerOptions);
 
-// Observe all major sections
-document.querySelectorAll('.section-header, .timeline-item, .project-card, .skill-category, .activity-card, .about-text, .contact-method').forEach(el => {
+// Observe elements for fade-in animation
+document.querySelectorAll('.section-header, .timeline-item, .project-card, .skill-group, .activity-card, .info-card').forEach(el => {
     el.style.opacity = '0';
     el.style.transform = 'translateY(30px)';
     el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
     observer.observe(el);
 });
 
-// Add animation styles dynamically
+// Add animation class
 const style = document.createElement('style');
 style.textContent = `
     .animate-in {
@@ -103,7 +98,7 @@ style.textContent = `
 `;
 document.head.appendChild(style);
 
-// Active navigation highlighting
+// ===== ACTIVE NAV HIGHLIGHTING =====
 const sections = document.querySelectorAll('section[id]');
 const navItems = document.querySelectorAll('.nav-links a');
 
@@ -128,7 +123,7 @@ window.addEventListener('scroll', () => {
     });
 });
 
-// Form submission handling
+// ===== CONTACT FORM HANDLING =====
 const contactForm = document.querySelector('.contact-form');
 if (contactForm) {
     contactForm.addEventListener('submit', async (e) => {
@@ -145,9 +140,7 @@ if (contactForm) {
             const response = await fetch(contactForm.action, {
                 method: 'POST',
                 body: formData,
-                headers: {
-                    'Accept': 'application/json'
-                }
+                headers: { 'Accept': 'application/json' }
             });
 
             if (response.ok) {
@@ -173,57 +166,11 @@ if (contactForm) {
     });
 }
 
-// Parallax effect for hero
-if (!isTouchDevice) {
-    const heroVisual = document.querySelector('.hero-visual');
-
-    window.addEventListener('scroll', () => {
-        const scrolled = window.pageYOffset;
-        const rate = scrolled * -0.3;
-
-        if (heroVisual) {
-            heroVisual.style.transform = `translateY(${rate}px)`;
-        }
-    });
-}
-
-// Typing effect for code window (optional enhancement)
-const codeElements = document.querySelectorAll('.code-keyword, .code-class, .code-string');
-let typingIndex = 0;
-
-function typeCode() {
-    if (typingIndex < codeElements.length) {
-        codeElements[typingIndex].style.opacity = '0';
-        codeElements[typingIndex].style.transition = 'opacity 0.3s ease';
-
-        setTimeout(() => {
-            codeElements[typingIndex].style.opacity = '1';
-            typingIndex++;
-        }, 100);
-
-        setTimeout(typeCode, 300);
-    }
-}
-
-// Start typing effect when hero is visible
-const heroObserver = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting && typingIndex === 0) {
-            setTimeout(typeCode, 1000);
-        }
-    });
-}, { threshold: 0.5 });
-
-const heroSection = document.querySelector('.hero');
-if (heroSection) {
-    heroObserver.observe(heroSection);
-}
-
-// Performance: Use requestAnimationFrame for scroll events
+// ===== PERFORMANCE: RequestAnimationFrame for scroll =====
 let ticking = false;
 
 function updateOnScroll() {
-    // Scroll-based animations can go here
+    // Scroll-based animations can be added here
     ticking = false;
 }
 
