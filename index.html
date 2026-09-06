@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seth Boye Afosah | Full-Stack Software Engineer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+    <!-- Cursor follower -->
+    <div class="cursor-follower"></div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#home" class="logo">
+                <span class="logo-bracket">{</span>SBA<span class="logo-bracket">}</span>
+            </a>
+            <button class="nav-toggle" aria-label="Toggle navigation">
+                <i data-lucide="menu"></i>
+            </button>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact" class="nav-cta">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-bg-grid"></div>
+        <div class="hero-content">
+            <div class="hero-badge">
+                <span class="badge-dot"></span>
+                Available for opportunities
+            </div>
+            <h1 class="hero-title">
+                <span class="title-line">Hi, I'm</span>
+                <span class="title-main">Seth Boye</span>
+                <span class="title-accent">Afosah</span>
+            </h1>
+            <p class="hero-subtitle">
+                Backend-focused <span class="highlight">Full-Stack Software Engineer</span> crafting scalable web applications with Laravel, PHP & modern JavaScript.
+            </p>
+            <div class="hero-actions">
+                <a href="#projects" class="btn btn-primary">
+                    <span>View My Work</span>
+                    <i data-lucide="arrow-right"></i>
+                </a>
+                <a href="#contact" class="btn btn-secondary">
+                    <span>Get In Touch</span>
+                </a>
+            </div>
+            <div class="hero-stats">
+                <div class="stat">
+                    <span class="stat-number">3+</span>
+                    <span class="stat-label">Years Experience</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat">
+                    <span class="stat-number">10+</span>
+                    <span class="stat-label">Projects Delivered</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat">
+                    <span class="stat-number">2</span>
+                    <span class="stat-label">Active Systems</span>
+                </div>
+            </div>
+        </div>
+        <div class="hero-visual">
+            <div class="code-window">
+                <div class="window-header">
+                    <span class="dot red"></span>
+                    <span class="dot yellow"></span>
+                    <span class="dot green"></span>
+                    <span class="window-title">developer.php</span>
+                </div>
+                <div class="window-content">
+                    <code>
+                        <span class="code-keyword">$engineer</span> = <span class="code-keyword">new</span> <span class="code-class">FullStackDeveloper</span>();<br><br>
+                        $engineer<br>
+                        &nbsp;&nbsp;->setName(<span class="code-string">"Seth Boye Afosah"</span>)<br>
+                        &nbsp;&nbsp;->setLocation(<span class="code-string">"Ashaiman, Ghana"</span>)<br>
+                        &nbsp;&nbsp;->addSkill(<span class="code-string">"Laravel"</span>)<br>
+                        &nbsp;&nbsp;->addSkill(<span class="code-string">"PHP"</span>)<br>
+                        &nbsp;&nbsp;->addSkill(<span class="code-string">"MySQL"</span>)<br>
+                        &nbsp;&nbsp;->addSkill(<span class="code-string">"JavaScript"</span>)<br>
+                        &nbsp;&nbsp;->addSkill(<span class="code-string">"TypeScript"</span>)<br>
+                        &nbsp;&nbsp;->addSkill(<span class="code-string">"React"</span>)<br>
+                        &nbsp;&nbsp;->addSkill(<span class="code-string">"Node.js"</span>)<br>
+                        &nbsp;&nbsp;->build();<br><br>
+                        <span class="code-comment">// Ready to solve your challenges</span>
+                    </code>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <span>Scroll to explore</span>
+            <i data-lucide="chevron-down"></i>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">01 // About Me</span>
+                <h2 class="section-title">Who I Am</h2>
+            </div>
+            <div class="about-grid">
+                <div class="about-content">
+                    <p class="about-text">
+                        I'm a <strong>Backend-focused Full-Stack Software Engineer</strong> based in Ashaiman, Greater Accra, Ghana. With a Bachelor's degree in Computer Science from Ho Technical University (completed September 2024), I specialize in building robust, scalable web applications.
+                    </p>
+                    <p class="about-text">
+                        My expertise lies in <strong>Laravel, PHP, and MySQL</strong>, with hands-on experience in RESTful API development, database optimization, secure authentication systems, and multi-tenant architectures. I'm passionate about writing clean code, solving complex problems, and delivering production-ready solutions.
+                    </p>
+                    <p class="about-text">
+                        Currently serving as a <strong>Technical Lead</strong> at HealthBuk, where I design backend features for health-related systems and lead feature implementation efforts. I also contribute to various projects at S&S Innovative Hub, where I've been developing Laravel applications since 2020.
+                    </p>
+                    <div class="about-highlights">
+                        <div class="highlight-item">
+                            <i data-lucide="map-pin"></i>
+                            <span>Ashaiman, Ghana</span>
+                        </div>
+                        <div class="highlight-item">
+                            <i data-lucide="mail"></i>
+                            <span>safosah00@gmail.com</span>
+                        </div>
+                        <div class="highlight-item">
+                            <i data-lucide="phone"></i>
+                            <span>+233 279 284 896</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-image">
+                    <div class="image-frame">
+                        <div class="frame-border"></div>
+                        <div class="profile-placeholder">
+                            <i data-lucide="user"></i>
+                            <span>Seth B. Afosah</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">02 // Skills</span>
+                <h2 class="section-title">Technical Arsenal</h2>
+            </div>
+            <div class="skills-categories">
+                <div class="skill-category">
+                    <h3 class="category-title">Languages</h3>
+                    <div class="skill-tags">
+                        <span class="tag tag-active">PHP</span>
+                        <span class="tag tag-active">TypeScript</span>
+                        <span class="tag">JavaScript</span>
+                        <span class="tag">HTML5</span>
+                        <span class="tag">CSS3</span>
+                        <span class="tag">SQL</span>
+                        <span class="tag">C++</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3 class="category-title">Frameworks & Libraries</h3>
+                    <div class="skill-tags">
+                        <span class="tag tag-framework">Laravel</span>
+                        <span class="tag tag-framework">Livewire</span>
+                        <span class="tag">Alpine.js</span>
+                        <span class="tag">React</span>
+                        <span class="tag">Nuxt.js</span>
+                        <span class="tag">jQuery</span>
+                        <span class="tag">Angular</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3 class="category-title">Databases</h3>
+                    <div class="skill-tags">
+                        <span class="tag tag-active">MySQL</span>
+                        <span class="tag">SQLite</span>
+                        <span class="tag">MongoDB</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3 class="category-title">Cloud & DevOps</h3>
+                    <div class="skill-tags">
+                        <span class="tag tag-cloud">AWS EC2</span>
+                        <span class="tag">Linux</span>
+                        <span class="tag tag-cloud">GitHub Actions</span>
+                        <span class="tag">CI/CD</span>
+                        <span class="tag">Composer</span>
+                        <span class="tag">Supervisor</span>
+                        <span class="tag">cPanel</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3 class="category-title">Tools & Platforms</h3>
+                    <div class="skill-tags">
+                        <span class="tag">VS Code</span>
+                        <span class="tag">Laragon</span>
+                        <span class="tag">XAMPP</span>
+                        <span class="tag">Cursor</span>
+                        <span class="tag">Figma</span>
+                        <span class="tag">Canva</span>
+                        <span class="tag">Git</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3 class="category-title">Core Competencies</h3>
+                    <div class="skill-tags">
+                        <span class="tag tag-active">RESTful APIs</span>
+                        <span class="tag">Database Optimization</span>
+                        <span class="tag">Multi-Tenant Architecture</span>
+                        <span class="tag">Authentication Systems</span>
+                        <span class="tag">Payment Integration</span>
+                        <span class="tag">SMS API</span>
+                        <span class="tag">SEO</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="experience">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">03 // Experience</span>
+                <h2 class="section-title">Professional Journey</h2>
+            </div>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <h3 class="job-title">PHP Developer & Technical Lead</h3>
+                            <span class="company">HealthBuk</span>
+                            <span class="period">2023 - Present</span>
+                        </div>
+                        <ul class="timeline-duties">
+                            <li>Design, develop, and maintain backend features using PHP and Laravel for production health-related systems</li>
+                            <li>Optimize application performance through query optimization and code refactoring, improving system reliability</li>
+                            <li>Generate technical reports and support data-driven decision-making</li>
+                            <li>Serve as technical lead, coordinating feature implementation and reviewing code contributions</li>
+                            <li>Utilized GitHub Actions and deployment scripts to support automated deployment and release processes</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <h3 class="job-title">Web Developer & Programmer</h3>
+                            <span class="company">S&S Innovative Hub</span>
+                            <span class="period">2020 - Present</span>
+                        </div>
+                        <ul class="timeline-duties">
+                            <li>Developed and maintained Laravel applications following best programming and SEO practices</li>
+                            <li>Implemented security best practices to improve data protection</li>
+                            <li>Provided periodic reports on software updates and system performance</li>
+                            <li>Built multiple client-facing platforms including SHSDesk and FlowEdu</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <h3 class="job-title">Web Developer (Intern)</h3>
+                            <span class="company">Millenium Hub</span>
+                            <span class="period">2022</span>
+                        </div>
+                        <ul class="timeline-duties">
+                            <li>Debugged and resolved frontend and backend issues to improve application stability</li>
+                            <li>Developed responsive user interfaces using HTML5, CSS3, and JavaScript</li>
+                            <li>Built backend services with PHP and Laravel, using Git for version control</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <h3 class="job-title">Teacher Assistant</h3>
+                            <span class="company">Ho Technical University</span>
+                            <span class="period">2021 - 2022</span>
+                        </div>
+                        <ul class="timeline-duties">
+                            <li>Assisted in teaching C++ and SQL (Oracle) to undergraduate students</li>
+                            <li>Provided one-on-one coding support, debugging assistance, and practical exercises</li>
+                            <li>Collaborated with lecturers to create a hands-on learning experience</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Education -->
+            <div class="education-section">
+                <h3 class="edu-title">Education</h3>
+                <div class="edu-card">
+                    <div class="edu-icon">
+                        <i data-lucide="graduation-cap"></i>
+                    </div>
+                    <div class="edu-details">
+                        <h4>Bachelor of Technology in Computer Science</h4>
+                        <p class="edu-school">Ho Technical University (HTU)</p>
+                        <p class="edu-location">Ho, Volta Region, Ghana</p>
+                        <p class="edu-date">Graduated: September 2024</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">04 // Projects</span>
+                <h2 class="section-title">Featured Work</h2>
+            </div>
+            <div class="projects-grid">
+                <a href="https://www.new-college.shsdesk.com" target="_blank" class="project-card project-featured">
+                    <div class="project-badge">Featured</div>
+                    <div class="project-icon">
+                        <i data-lucide="school"></i>
+                    </div>
+                    <h3 class="project-name">FlowEdu</h3>
+                    <p class="project-desc">Multi-tenant school management system for Colleges of Education built with Laravel, Blade, Livewire, and Alpine.js. Features database indexing for large datasets.</p>
+                    <div class="project-tags">
+                        <span class="tag">Laravel</span>
+                        <span class="tag">Livewire</span>
+                        <span class="tag">MySQL</span>
+                    </div>
+                    <div class="project-link">
+                        <span>Visit Project</span>
+                        <i data-lucide="external-link"></i>
+                    </div>
+                </a>
+
+                <a href="https://www.newapp.edurecordsgh.com" target="_blank" class="project-card">
+                    <div class="project-icon">
+                        <i data-lucide="file-text"></i>
+                    </div>
+                    <h3 class="project-name">EduRecordsGH</h3>
+                    <p class="project-desc">School management system for basic schools using the LAMP stack with optimized database performance and scalable backend modules.</p>
+                    <div class="project-tags">
+                        <span class="tag">Laravel</span>
+                        <span class="tag">PHP</span>
+                        <span class="tag">MySQL</span>
+                    </div>
+                    <div class="project-link">
+                        <span>Visit Project</span>
+                        <i data-lucide="external-link"></i>
+                    </div>
+                </a>
+
+                <a href="https://www.purity-conf.netlify.com" target="_blank" class="project-card">
+                    <div class="project-icon">
+                        <i data-lucide="users"></i>
+                    </div>
+                    <h3 class="project-name">Purity Conference</h3>
+                    <p class="project-desc">Event website for ticket sales and sponsorships using Nuxt 3, Vue 3, TypeScript, and custom PHP backend.</p>
+                    <div class="project-tags">
+                        <span class="tag">Vue 3</span>
+                        <span class="tag">Nuxt 3</span>
+                        <span class="tag">TypeScript</span>
+                    </div>
+                    <div class="project-link">
+                        <span>Visit Project</span>
+                        <i data-lucide="external-link"></i>
+                    </div>
+                </a>
+
+                <a href="https://www.shsdesk.com" target="_blank" class="project-card">
+                    <div class="project-icon">
+                        <i data-lucide="book-open"></i>
+                    </div>
+                    <h3 class="project-name">SHSDesk</h3>
+                    <p class="project-desc">Online admission platform for secondary schools with integrated SMS and payment gateway APIs.</p>
+                    <div class="project-tags">
+                        <span class="tag">PHP</span>
+                        <span class="tag">Angular</span>
+                        <span class="tag">jQuery</span>
+                    </div>
+                    <div class="project-link">
+                        <span>Visit Project</span>
+                        <i data-lucide="external-link"></i>
+                    </div>
+                </a>
+
+                <div class="project-card">
+                    <div class="project-icon">
+                        <i data-lucide="briefcase"></i>
+                    </div>
+                    <h3 class="project-name">LaborBay</h3>
+                    <p class="project-desc">Recruitment platform connecting businesses with skilled talents, built with Laravel and optimized database strategies.</p>
+                    <div class="project-tags">
+                        <span class="tag">Laravel</span>
+                        <span class="tag">Blade</span>
+                        <span class="tag">MySQL</span>
+                    </div>
+                    <div class="project-link">
+                        <span>Case Study</span>
+                        <i data-lucide="arrow-right"></i>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-icon">
+                        <i data-lucide="building-2"></i>
+                    </div>
+                    <h3 class="project-name">Estate Management</h3>
+                    <p class="project-desc">Real estate management system with map integration for property listings and management.</p>
+                    <div class="project-tags">
+                        <span class="tag">PHP</span>
+                        <span class="tag">jQuery</span>
+                        <span class="tag">Map APIs</span>
+                    </div>
+                    <div class="project-link">
+                        <span>View Details</span>
+                        <i data-lucide="arrow-right"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Leadership Section -->
+    <section class="leadership">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">05 // Activities</span>
+                <h2 class="section-title">Leadership & Involvement</h2>
+            </div>
+            <div class="activities-grid">
+                <div class="activity-card">
+                    <div class="activity-icon">
+                        <i data-lucide="trophy"></i>
+                    </div>
+                    <h4>Exhibitor</h4>
+                    <p>ATUAS 2023</p>
+                </div>
+                <div class="activity-card">
+                    <div class="activity-icon">
+                        <i data-lucide="code-2"></i>
+                    </div>
+                    <h4>Participant</h4>
+                    <p>HackLab 2021</p>
+                </div>
+                <div class="activity-card">
+                    <div class="activity-icon">
+                        <i data-lucide="users"></i>
+                    </div>
+                    <h4>Member</h4>
+                    <p>COMPSA HTU</p>
+                </div>
+                <div class="activity-card">
+                    <div class="activity-icon">
+                        <i data-lucide="zap"></i>
+                    </div>
+                    <h4>Member</h4>
+                    <p>AXLR8 [Accelerate] HTU</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">06 // Contact</span>
+                <h2 class="section-title">Let's Work Together</h2>
+            </div>
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <h3>Get in Touch</h3>
+                    <p>I'm always open to discussing new projects, creative ideas, or opportunities to be part of your vision.</p>
+                    <div class="contact-methods">
+                        <a href="mailto:safosah00@gmail.com" class="contact-method">
+                            <div class="method-icon">
+                                <i data-lucide="mail"></i>
+                            </div>
+                            <div class="method-details">
+                                <span class="method-label">Email</span>
+                                <span class="method-value">safosah00@gmail.com</span>
+                            </div>
+                        </a>
+                        <a href="tel:+233279284896" class="contact-method">
+                            <div class="method-icon">
+                                <i data-lucide="phone"></i>
+                            </div>
+                            <div class="method-details">
+                                <span class="method-label">Phone</span>
+                                <span class="method-value">+233 279 284 896</span>
+                            </div>
+                        </a>
+                        <a href="https://github.com/onlinepresence" target="_blank" class="contact-method">
+                            <div class="method-icon">
+                                <i data-lucide="github"></i>
+                            </div>
+                            <div class="method-details">
+                                <span class="method-label">GitHub</span>
+                                <span class="method-value">github.com/onlinepresence</span>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="contact-location">
+                        <i data-lucide="map-pin"></i>
+                        <span>Ashaiman, Greater Accra, Ghana</span>
+                    </div>
+                </div>
+                <form class="contact-form" action="https://formspree.io/f/safosah00@gmail.com" method="POST">
+                    <div class="form-group">
+                        <label for="name">Your Name</label>
+                        <input type="text" id="name" name="name" required placeholder="John Doe">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Your Email</label>
+                        <input type="email" id="email" name="email" required placeholder="john@example.com">
+                    </div>
+                    <div class="form-group">
+                        <label for="subject">Subject</label>
+                        <input type="text" id="subject" name="subject" placeholder="Project Inquiry">
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="5" required placeholder="Tell me about your project..."></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-full">
+                        <span>Send Message</span>
+                        <i data-lucide="send"></i>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <a href="#home" class="logo">
+                        <span class="logo-bracket">{</span>SBA<span class="logo-bracket">}</span>
+                    </a>
+                    <p>Building scalable solutions with clean code and modern technologies.</p>
+                </div>
+                <div class="footer-links">
+                    <a href="#about">About</a>
+                    <a href="#skills">Skills</a>
+                    <a href="#experience">Experience</a>
+                    <a href="#projects">Projects</a>
+                    <a href="#contact">Contact</a>
+                </div>
+                <div class="footer-social">
+                    <a href="https://github.com/onlinepresence" target="_blank" aria-label="GitHub">
+                        <i data-lucide="github"></i>
+                    </a>
+                    <a href="mailto:safosah00@gmail.com" aria-label="Email">
+                        <i data-lucide="mail"></i>
+                    </a>
+                    <a href="tel:+233279284896" aria-label="Phone">
+                        <i data-lucide="phone"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Seth Boye Afosah. All rights reserved.</p>
+                <p>Built with <i data-lucide="heart" class="heart-icon"></i> and lots of coffee</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
