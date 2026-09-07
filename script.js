@@ -11,6 +11,48 @@ function toggleTheme() {
     localStorage.setItem('theme', newTheme);
 }
 
+// ===== SKILL CARDS COLLAPSE / EXPAND =====
+function toggleSkills(btn) {
+    const group = btn.closest('.skill-group');
+    const list = group.querySelector('.skill-list');
+    const isExpanded = btn.classList.contains('expanded');
+
+    if (isExpanded) {
+        // Collapse: animate pills out
+        const pills = list.querySelectorAll('.skill-pill.more');
+        pills.forEach((pill, i) => {
+            pill.style.transition = `opacity 0.2s ease ${i * 30}ms, transform 0.2s ease ${i * 30}ms`;
+            pill.style.opacity = '0';
+            pill.style.transform = 'scale(0.9) translateY(-4px)';
+        });
+        setTimeout(() => {
+            list.classList.add('collapsed');
+            btn.classList.remove('expanded');
+            const count = list.querySelectorAll('.skill-pill.more').length;
+            btn.querySelector('span').textContent = `Show ${count} more`;
+            btn.querySelector('i').style.transform = '';
+        }, pills.length * 30 + 200);
+    } else {
+        // Expand: remove hidden class then animate pills in
+        list.classList.remove('collapsed');
+        const pills = list.querySelectorAll('.skill-pill.more');
+        pills.forEach((pill, i) => {
+            pill.style.opacity = '0';
+            pill.style.transform = 'scale(0.9) translateY(-4px)';
+        });
+        requestAnimationFrame(() => {
+            pills.forEach((pill, i) => {
+                pill.style.transition = `opacity 0.25s ease ${i * 40}ms, transform 0.25s ease ${i * 40}ms`;
+                pill.style.opacity = '1';
+                pill.style.transform = 'scale(1) translateY(0)';
+            });
+        });
+        btn.classList.add('expanded');
+        btn.querySelector('span').textContent = 'Show less';
+        btn.querySelector('i').style.transform = 'rotate(180deg)';
+    }
+}
+
 // Load saved theme on page load
 (function() {
     const savedTheme = localStorage.getItem('theme') || 'dark';

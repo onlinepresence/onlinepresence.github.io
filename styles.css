@@ -444,7 +444,9 @@ img {
 
 .code-keyword { color: var(--accent-tertiary); }
 .code-class { color: var(--accent-secondary); }
-.code-string { color: #ffd700; }
+.code-string { color: #fbbf24; }
+
+[data-theme="light"] .code-string { color: #b45309; }
 
 /* Scroll Indicator */
 .scroll-indicator {
@@ -625,6 +627,31 @@ img {
     border-color: rgba(0, 212, 170, 0.3);
     color: var(--accent-secondary);
 }
+
+/* Hidden skills — collapsed state */
+.skill-list.collapsed .skill-pill.more {
+    display: none;
+}
+
+/* Show more / show less button */
+.skill-more-btn {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    margin-top: 0.75rem;
+    padding: 0;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-family: var(--font-body);
+    font-size: 0.8rem;
+    font-weight: 500;
+    color: var(--accent-primary);
+    transition: opacity var(--transition-fast);
+}
+.skill-more-btn:hover { opacity: 0.7; }
+.skill-more-btn i { width: 14px; height: 14px; transition: transform 0.3s ease; }
+.skill-more-btn.expanded i { transform: rotate(180deg); }
 
 /* ===== EXPERIENCE SECTION ===== */
 .experience {
