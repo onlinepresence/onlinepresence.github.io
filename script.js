@@ -12,6 +12,23 @@ function toggleTheme() {
 }
 
 // ===== SKILL CARDS COLLAPSE / EXPAND =====
+(function initSkillCards() {
+    document.querySelectorAll('.skill-group').forEach(group => {
+        const list = group.querySelector('.skill-list');
+        const morePills = list.querySelectorAll('.skill-pill.more');
+        const btn = group.querySelector('.skill-more-btn');
+        if (morePills.length > 0 && btn) {
+            // Start collapsed
+            list.classList.add('collapsed');
+            const count = morePills.length;
+            btn.querySelector('span').textContent = `Show ${count} more`;
+        } else if (btn) {
+            // No hidden pills — remove the button
+            btn.remove();
+        }
+    });
+})();
+
 function toggleSkills(btn) {
     const group = btn.closest('.skill-group');
     const list = group.querySelector('.skill-list');
